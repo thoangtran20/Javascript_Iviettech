@@ -1,0 +1,137 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Household Manager</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="card mt-4">
+				<div class="card-header">
+					<h3 class="card-title">HouseHold</h3>
+				</div>
+				<div class="card-body">
+					<div class="row mt-4">
+						<div class="col-8">
+							<input
+								type="text"
+								id="address"
+								placeholder="Address"
+								class="form-control"
+							/>
+						</div>
+						<div class="col-4">
+							<button type="button" id="add_household" class="btn btn-primary">
+								Submit
+							</button>
+							<button
+								type="button"
+								id="update_household"
+								class="btn btn-warning ms-2 d-none"
+							>
+								Update
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card mt-2">
+				<div class="card-header">
+					<h3 class="card-title">People</h3>
+				</div>
+				<div class="card-body">
+					<div class="row mt-4">
+						<div class="col-2">
+							<select name="" id="houseHold" class="form-control">
+								<option value="" disabled hidden selected>
+									Please select HD
+								</option>
+							</select>
+						</div>
+						<div class="col-3">
+							<input
+								type="text"
+								name="fullname"
+								id="fullName"
+								placeholder="Full Name"
+								class="form-control"
+							/>
+						</div>
+						<div class="col-1">
+							<label> 
+								<input type="checkbox" name="gender" id="gender">
+							</label>
+						</div>
+						<div class="col-3">
+							<input
+								type="text"
+								name="relationship"
+								id="relationship"
+								placeholder="Relationship"
+								class="form-control"
+							/>
+						</div>
+						<div class="col-3">
+							<input
+								type="date"
+								name="birthday"
+								id="birthday"
+								class="form-control"
+							/>
+						</div>
+						<div class="col-3 mt-4">
+							<input
+								type="text"
+								name="job"
+								id="job"
+								placeholder="Job"
+								class="form-control"
+							/>
+						</div>
+						<div class="col-4">
+							<button
+								type="button"
+								class="btn btn-primary mt-4"
+								id="add_people"
+							>
+								Add
+							</button>
+							<button
+								type="button"
+								id="update_people"
+								class="btn btn-warning mt-4 d-none"
+							>
+								Update
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card mt-3">
+				<div class="card-header">
+					<h3 class="card-title">HouseHold List</h3>
+				</div>
+				<div class="card-body">
+					<table class="table mt-4">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>Addres</th>
+								<th>Number</th>
+								<th>Detail</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody id="app"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="household.js"></script>
+	</body>
+</html>
